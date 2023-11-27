@@ -2,6 +2,7 @@
 import { store } from "../store";
 import Card from './Card.vue';
 import CardsStats from "./CardsStats.vue";
+import AppLoader from './AppLoader.vue';
 
 export default {
     data() {
@@ -9,7 +10,7 @@ export default {
             store,
         }
     },
-    components: { Card, CardsStats }
+    components: { Card, CardsStats, AppLoader }
 }
 </script>
 
@@ -17,7 +18,8 @@ export default {
     <main>
         <div class="container">
             <CardsStats />
-            <div class="row">
+            <AppLoader v-if="store.loading"/>
+            <div class="row" v-else>
                 <div class="col" v-for="card in store.cards" :key="card.id">
                     <Card :card="card" />
                 </div>
