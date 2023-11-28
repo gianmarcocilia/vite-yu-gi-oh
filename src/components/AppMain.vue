@@ -30,8 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 main {
-    background-color: orange;
-    padding: 2rem 0;
+    padding: 1rem 0;
     .container {
         width: 80%;
         margin: 0 auto;

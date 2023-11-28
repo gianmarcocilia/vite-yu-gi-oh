@@ -13,6 +13,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
+    background-color: white;
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
