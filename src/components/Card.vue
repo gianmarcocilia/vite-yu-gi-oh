@@ -15,7 +15,7 @@ export default {
   <div class="card">
     <img :src="card.card_images[0].image_url" alt="">
     <div>
-      <h3>{{ card.name }}</h3>
+      <h4>{{ card.name }}</h4>
       <p>{{ archetype }}</p>
     </div>
   </div>
@@ -24,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 .card {
   text-align: center;
-    h3 {
+    h4 {
     color: white;
     padding: 1rem 0;
   } 
