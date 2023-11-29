@@ -10,7 +10,13 @@ import Random from './components/Random.vue';
 export default {
     data() {
         return {
-            store
+            store,
+            selectValue: [
+            "Alien",
+            "Ally of Justice",
+            "Ancient Gear",
+            "Blue-Eyes",
+            ]
         }
     },
     created() {
@@ -64,7 +70,7 @@ export default {
     <AppHeader />
     <div class="container">
         <div class="row">
-            <Select value1="Alien" value2="Ally of Justice" value3="Ancient Gear" @selectedValue="onChange()" />
+            <Select :values="selectValue" @selectedValue="onChange()" />
             <Button @buttonClicked="randomCard()" text="Carta casuale" />
             <Button @buttonClicked="deleteRandom()" text="Rimuovi carta casuale" v-show="store.randomView"/>
         </div>

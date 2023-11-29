@@ -20,7 +20,7 @@ export default {
             <CardsStats />
             <AppLoader v-if="store.loading"/>
             <div class="row" v-else>
-                <div class="col" v-for="card in store.cards" :key="card.id">
+                <div class="col" v-for="card in store.cards" >
                     <Card :card="card" />
                 </div>
             </div>
